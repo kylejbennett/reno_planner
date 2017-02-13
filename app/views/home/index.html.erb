@@ -1,0 +1,7 @@
+<h1>RenoPlanner</h1>
+<% if current_user %>
+	<p>Hello, you are User number <%= @user_number %></p>
+	<%= link_to "+", projects_new_path %>
+<% else %>
+	<p>Nothing</p>
+<% end %>
