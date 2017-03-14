@@ -1,7 +1,11 @@
-<h1>RenoPlanner</h1>
-<% if current_user %>
-	<p>Hello, you are User number <%= @user_number %></p>
-	<%= link_to "+", new_project_path %>
-<% else %>
-	<p>Nothing</p>
+<div class="container">
+	<h1>RenoPlanner</h1>
+	<div class="cta">
+		<% if current_user %>
+			<%= link_to "Project List", projects_path %>
+		<% end %>
+	</div>
+</div>
+<%= link_to new_project_path, :class => "add-project" do %>
+	<i class="material-icons md-48">add_circle</i>
 <% end %>

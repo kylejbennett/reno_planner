@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   	sessions: 'users/sessions'
   }
   
-  root 'home#index'
+  root 'projects#index'
   resources :projects
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

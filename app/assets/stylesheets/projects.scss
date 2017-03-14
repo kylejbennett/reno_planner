@@ -1,3 +1,44 @@
-// Place all the styles related to the projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.container{
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 50px;
+	box-sizing: border-box;
+
+	h1{
+		text-align: center;
+	}
+
+	p.total{
+		font-weight: bold;
+		text-align: right;
+		margin: 15px 10px 0 0;
+	}
+
+	.row{
+		display: block;
+		background-color: #efefef;
+		margin: 5px;
+		padding: 5px;
+		box-sizing: border-box;
+		color: #000;
+		position: relative;
+
+		span{
+			position: absolute;
+			right: 5px;
+		}
+	}
+
+	.cta{
+		a{
+			display:block;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.container{
+		padding: 0 5px;
+	}
+}

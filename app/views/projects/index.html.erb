@@ -1,2 +1,16 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<div class="container">
+	<h1>PROJECT LIST</h1>
+	<% @projects.each do |project| %>
+		<%= link_to project_path(project), :class => "row" do %>
+			<%= project.name %>
+			<span><%= number_to_currency(project.estimated_cost) %></span>
+		<% end %>
+	<%end%>
+	<p class="total">
+		Total Estimated Cost: <%= number_to_currency(@projects_total_cost) %>
+	</p>
+</div>
+
+<%= link_to new_project_path, :class => "add-project" do %>
+	<i class="material-icons md-48">add_circle</i>
+<% end %>

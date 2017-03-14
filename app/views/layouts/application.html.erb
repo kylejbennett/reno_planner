@@ -3,12 +3,23 @@
   <head>
     <title>RenoPlanner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav>
+      <%= link_to root_path, :class => 'go-home' do %>
+        <i class="material-icons md-48">build</i>
+      <% end %>
+      <%= link_to projects_path, :class => 'see-projects' do %>
+        <i class="material-icons md-48">format_list_bulleted</i>
+      <% end %>
+    </nav>
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 

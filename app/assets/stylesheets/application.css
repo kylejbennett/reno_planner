@@ -13,3 +13,85 @@
  *= require_tree .
  *= require_self
  */
+
+a, div, h1, h2, h3, h4, h5, p, span, input, textarea, nav, body{
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav{
+	height: 60px;
+	position: relative;
+}
+
+.notice, .alert{
+	text-align: center;
+	font-weight: bold;
+}
+
+input[type="text"], textarea{
+	margin: 3px 0 8px 0;
+	font-size: 16px;
+}
+
+.action input{
+	margin: 10px 0;
+}
+
+label{
+	font-size: 20px;
+}
+
+.material-icons{
+	color: #008000;
+}
+
+.material-icons.md-48 { 
+	font-size: 48px; 
+}
+
+.go-home{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.see-projects{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.add-project{
+	position: absolute;
+	bottom: 20px;
+	right: 0px;
+	left: 0px;
+	text-align: center;
+}
+
+.back-to-list{
+	
+}
+
+@media only screen and (max-width: 600px){
+	.add-project{
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		left: initial;
+		text-align: initial;
+	}
+
+	.action input{
+		display: block;
+		width: 50%;
+		height: 40px;
+		margin: 10px auto;
+	}
+
+	input[type="text"], textarea{
+		width: 100%;
+	}
+}

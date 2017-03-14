@@ -1,16 +1,18 @@
-<h1>Create a new Project</h1>
+<div class="container">
+	<h1>Create a new Project</h1>
 
-<%= form_for Project.new, :html => {:multipart =>true} do |f|%>
-	<%= f.label :name%><br>
-	<%= f.text_field :name%><br>
-	<%= f.label :description %><br>
-	<%= f.text_field :description %><br>
-	<%= f.label :estimated_time %><br>
-	<%= f.text_field :estimated_time %><br>
-	<%= f.label :estimated_cost %><br>
-	<%= f.text_field :estimated_cost %><br>
+	<%= form_for Project.new, :html => {:multipart =>true} do |f|%>
+		<%= f.label :name%><br>
+		<%= f.text_field :name%><br>
+		<%= f.label :description %><br>
+		<%= f.text_area :description %><br>
+		<%= f.label :estimated_time, 'Estimated Time (hours)' %><br>
+		<%= f.text_field :estimated_time %><br>
+		<%= f.label :estimated_cost, "Estimated Cost ($)" %><br>
+		<%= f.text_field :estimated_cost %><br>
 
-	<div class="action">
-		<%= f.submit :Create, data: {disable_with: "Creating Project..."} %>
-	</div>
-<% end %>
+		<div class="action">
+			<%= f.submit :Create, data: {disable_with: "Creating Project..."} %>
+		</div>
+	<% end %>
+</div>

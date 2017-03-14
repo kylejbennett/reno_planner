@@ -31,9 +31,25 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @project = Project.find(params[:id])
   end
 
   def index
+    @user = User.find(current_user[:id])
+    @projects = Project.where(user_id: @user[:id])
+
+    @project_costs = []
+
+    @projects.each do |project|
+      @project_costs << project.estimated_cost
+    end
+
+    @projects_total_cost = 0;
+
+    @project_costs.each do |cost|
+      @projects_total_cost += cost
+    end
+
   end
 
   private
