@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user!
+  
   def new
     if current_user
       @user = User.find(current_user[:id])
