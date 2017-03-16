@@ -31,12 +31,15 @@ nav{
 }
 
 input[type="text"], textarea{
+	width: 50%;
 	margin: 3px 0 8px 0;
 	font-size: 16px;
+	border: 1px solid #b5b5b5;
 }
 
 .action input{
 	margin: 10px 0;
+	font-size: 20px;
 }
 
 label{
