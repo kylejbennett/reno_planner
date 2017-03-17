@@ -11,9 +11,10 @@ class ProjectsController < ApplicationController
   end
 
   def create
+    @total_projects = Project.all.count
     @user = User.find(current_user[:id])
     @project = Project.new(project_params)
-    @project.update(user_id: @user[:id])
+    @project.update(user_id: @user[:id], priority: @total_projects + 1)
     if @project.save
       flash[:notice] = "Your project has been added!"
       redirect_to @project
@@ -39,6 +40,7 @@ class ProjectsController < ApplicationController
   def index
     @user = User.find(current_user[:id])
     @projects = Project.where(user_id: @user[:id])
+    @total_projects = Project.all.count
 
     @project_costs = []
 

@@ -9,6 +9,7 @@
 	<p class="total">
 		Total Estimated Cost: <%= number_to_currency(@projects_total_cost) %>
 	</p>
+	<%= @total_projects %>
 </div>
 
 <%= link_to new_project_path, :class => "add-project" do %>
